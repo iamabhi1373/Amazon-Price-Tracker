@@ -1,0 +1,80 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Define custom CSS variables */
+:root {
+  --foreground-color: #010511; /* Default text color */
+  --background-color: #eceff2; /* Default background color */
+}
+
+/* Media query for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color: #f0ebeb; /* White text color in dark mode */
+    --background-color: #dce2ea; /* Dark background color */
+  }
+}
+
+/* Apply custom colors to body */
+body {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+/* Navbar styles */
+.navbar {
+  padding: 10px;
+  background-color: #110404; /* Navbar background color */
+  box-shadow: 0 2px 4px rgba(244, 240, 240, 0.1); /* Navbar shadow */
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f0eeea; /* Logo text color */
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure the list takes the full width */
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: #cf1111; /* Nav link color */
+  text-decoration: none;
+  padding: 0 1rem; /* Add padding between links */
+}
+
+.nav-link:hover {
+  color: #d9d8eb; /* Hover color */
+}
+
+
+/* Main content container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #4315da; /* Heading color */
+}
+
+.textclass {
+  @apply text-center font-bold text-3xl py-5; /* Apply Tailwind CSS classes */
+}
